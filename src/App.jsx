@@ -1,8 +1,17 @@
+import { Navigate, Route, Routes } from 'react-router'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import PokemonsList from './components/PokemonsList'
+
 function App() {
+  const queryClient = new QueryClient()
   return (
-    <>
-      <h1>Poke App</h1>
-    </>
+    <QueryClientProvider client={queryClient}>
+      <Routes>
+        <Route path='/' element={<PokemonsList />} />
+
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </QueryClientProvider>
   )
 }
 

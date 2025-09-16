@@ -1,12 +1,52 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Objetivo:
+Usando la API pública de Pokémon https://pokeapi.co/ , desarrolla una aplicación web en React que permita listar y explorar la información de los Pokémon.
 
-Currently, two official plugins are available:
+Requerimientos funcionales:
+Mostrar un listado paginado de Pokémon (/api/v2/pokemon-species).
+Al hacer clic en un Pokémon, mostrar:
+Información básica (nombre, color, hábitat, etc.).
+Su cadena de evolución (/evolution-chain/).
+Permitir navegar en la cadena de evolución (por ejemplo, ver el siguiente y el anterior en la evolución).
+Incluir paginación en el listado principal.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Requerimientos técnicos:
+Usar React con hooks o functional components.
+Manejo de estado: libre elección (React Context, Redux, Zustand, etc.).
+Manejo de errores y estados de carga (loading, error).
+Buen diseño de componentes y reutilización.
+Estilos: libre elección (CSS, styled-components, Chakra UI, Ant, Material).
+Opcional: pruebas unitarias con Jest o Testing Library.
 
-## Expanding the ESLint configuration
+Entrega:
+Código en un repositorio de GitHub/GitLab.
+Incluir instrucciones de instalación y ejecución en un README.md.
+Los commits deben mostrar un flujo lógico de trabajo (no todo en un solo commit).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Requerimientos
+Tener instalado Node 20 o superior.
+
+# Instalación
+- Clonar el repositorio: 
+```bash
+git clone https://github.com/davidmc1996/poke-app.git
+```
+- Acceder a la carpeta del proyecto
+```bash
+cd poke-app
+```
+
+- Ejecutar el comando, para instalar las dependencias
+```bash
+npm install
+```
+
+- Ejecutar el comando, para ejecutar la aplicación
+```bash
+npm run dev
+```
+
+- Ejecutar el comando, para las pruebas unitarias
+```bash
+npm run test
+```

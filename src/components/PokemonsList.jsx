@@ -49,7 +49,16 @@ export default function PokemonsList() {
           </Grid>
         )
       })}
-      {data.results?.length && (
+      
+      {data.results?.length === 0 && (
+        <Grid size={12}>
+          <Typography variant="h4" component="h2" align="center">
+            NO SE ENCONTRARON RESULTADOS!
+          </Typography>
+        </Grid>
+      )}
+
+      {data.results?.length > 0 && (
         <Grid size={12} alignContent={"center"} display="flex" justifyContent="center">
           <Pagination count={totalPages} page={page} onChange={handleChange} color="primary" />
         </Grid>
